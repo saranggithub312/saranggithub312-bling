@@ -183,6 +183,7 @@ newForm.display = "flex";
 let blobone = document.createElement("input");
 newForm.append(blobone);
 blobone.type = "radio";
+blobone.name = "click"
 //blobone.value = "true"
 blobone.style.cssText = "margin-top: 10px; margin-left: 10px; "
 blobone.style.backgroundColor = "#403e38";
@@ -198,6 +199,7 @@ labelone.style.cssText = "margin-top: 46px; margin-left: 7px; "
 let radiotwo = document.createElement("input");
 newForm.append(radiotwo);
 radiotwo.type = "radio";
+radiotwo.name = "click"
 //blobone.value = "true"
 radiotwo.style.cssText = "margin-top: 10px; margin-left: 25px; "
 radiotwo.style.backgroundColor = "#403e38";
@@ -234,14 +236,14 @@ rightDiv.style.cssText = "width:45%; height: 500px; "
 //right sub div
 const rightsubdiv =document.createElement('div')
 rightDiv.append(rightsubdiv);
-rightsubdiv.style.height = "150px";
+rightsubdiv.style.height = "80px";
 
 //adding Font to right sub Div
 
 let largerFont = document.createElement('h1');
 rightsubdiv.append(largerFont);
 //change here.............................
-largerFont.textContent = "Bling!!";
+//largerFont.textContent = "Bling!!";
 largerFont.style.fontSize = "5em";
 largerFont.style.fontFamily = "Gill Sans"
 largerFont.style.fontWeight = "bolder"
@@ -252,22 +254,62 @@ largerFont.style.color = "#403e38"
 const rightsubdivtwo = document.createElement('div');
 rightDiv.append(rightsubdivtwo);
 rightsubdivtwo.style.height = "350px";
-rightsubdivtwo.display = "flex"
+rightsubdivtwo.style.position = "relative"
+//ightsubdivtwo.display = "flex"
+
+//setting a new image Div
+// let images = document.createElement('div');
+// rightsubdivtwo.append(images)
+// images.style.height = "350px";
+// images.style.marginLeft = "180px"
+
+
+//blob image
+let blobimage  = document.createElement('img');
+rightsubdivtwo.append(blobimage);
+blobimage.src = "assets/images/blob.png" ;
+blobimage.style.width = "27em";
+blobimage.style.height = "27em";
+blobimage.style.marginLeft = "120px";
+blobimage.style.marginTop = "-40px";
+blobimage.style.position = "relative";
+blobimage.style.visibility = "hidden";
+
+
+
+//change image
+
+let randomImage = document.createElement('img');
+rightsubdivtwo.append(randomImage);
+randomImage.src = "assets/images/polaroid.png" ;
+randomImage.style.position = "absolute";
+randomImage.style.width = "15em";
+randomImage.style.right = "12em";
+randomImage.style.top = "4em";
+randomImage.style.visibility = "hidden";
+
+     
+     
+     
+
 
 //adding image by the button events
-let changeImage = document.createElement('img');
-rightsubdivtwo.append(changeImage);
-changeImage.src = "assets/images/among-us.png";
-changeImage.style.width = "134px";
-changeImage.style.height = "134px"
-changeImage.style.marginLeft = "270px"
-changeImage.style.marginTop = "5px"
+// let changeImage = document.createElement('img');
+// rightsubdivtwo.append(changeImage);
+//changeImage.src = "assets/images/among-us.png";
+
+//  changeImage.style.width = "134px";
+//  changeImage.style.height = "134px"
+//  changeImage.style.marginLeft = "270px"
+//  changeImage.style.marginTop = "5px"
+
+
 
 
 //additional div for adding images
 const secondDiv = document.createElement('div');
 body.append(secondDiv);
-secondDiv.style.height = "300px";
+secondDiv.style.height = "200px";
 
 
 const footer = document.createElement('div');
@@ -279,11 +321,13 @@ footer.style.textAlign = "center";
 //footer
  let footerword = document.createElement('p');
  footer.append(footerword);
-footerword.textContent = "Credits:  Poloroid  TV  Traitor FallGuy   Radio";
+footerword.textContent = " 🖤Credits:  Poloroid  TV  Traitor FallGuy   Radio";
 footerword.style.wordSpacing = "15px";
 footerword.style.fontFamily = "sans-serif";
 footerword.style.fontWeight = "600";
 footerword.style.fontSize = "15px";
+
+
 
 //changing the color functionality
 
@@ -292,4 +336,92 @@ selectBackground.onchange = () =>{
 
 }
 
+//working on input text property
 
+Bling.onkeyup = ()=>{
+    largerFont.textContent = Bling.value;
+}
+
+//blob checked list
+
+blobone.onchange =() =>{
+
+    blobimage.src = "assets/images/blob.png" ;
+    blobimage.style.width = "27em";
+    blobimage.style.height = "27em";
+    blobimage.style.marginLeft = "120px";
+    blobimage.style.marginTop = "-40px";
+    blobimage.style.visibility = "visible";
+     
+}
+
+radiotwo.onchange = () =>{
+    
+    blobimage.style.visibility = "hidden";
+}
+//5  images to display
+
+
+
+//polaroid
+poloroid.addEventListener('click', (e)=>{
+    //changeImage.style.backgroundImage = "url(assets/images/poloroid.png) no-repeat" 
+    randomImage.src = "assets/images/polaroid.png" ;
+    randomImage.style.width = "15em";
+    randomImage.style.right = "12em";
+    randomImage.style.top = "4em";
+    randomImage.style.visibility = "visible";
+    e.preventDefault();
+    
+});
+//TV
+
+TV.addEventListener('click', (e)=>{
+    //changeImage.style.backgroundImage = "url(assets/images/poloroid.png) no-repeat" 
+    randomImage.src = "assets/images/tv.png" ;
+    randomImage.style.width = "15em";
+    randomImage.style.right = "12em";
+    randomImage.style.top = "5em";
+    randomImage.style.visibility = "visible";
+    e.preventDefault();
+    
+});
+
+//Traitor
+
+Traitor.addEventListener('click', (e)=>{
+    //changeImage.style.backgroundImage = "url(assets/images/poloroid.png) no-repeat" 
+    randomImage.src = "assets/images/among-us.png" ;
+    randomImage.style.width = "15em";
+    randomImage.style.right = "12em";
+    randomImage.style.top = "4em";
+    randomImage.style.visibility = "visible";
+    e.preventDefault();
+    
+});
+
+//Fall Guy
+
+Fallguy.addEventListener('click', (e)=>{
+    //changeImage.style.backgroundImage = "url(assets/images/poloroid.png) no-repeat" 
+    randomImage.src = "assets/images/fall-guy-01.png" ;
+    randomImage.style.width = "15em";
+    randomImage.style.right = "12em";
+    randomImage.style.top = "4em";
+    randomImage.style.visibility = "visible";
+    e.preventDefault();
+    
+});
+
+//Radio
+
+Radio.addEventListener('click', (e)=>{
+    //changeImage.style.backgroundImage = "url(assets/images/poloroid.png) no-repeat" 
+    randomImage.src = "assets/images/radio-02.png" ;
+    randomImage.style.width = "15em";
+    randomImage.style.right = "12em";
+    randomImage.style.top = "6em";
+    randomImage.style.visibility = "visible";
+    e.preventDefault();
+    
+});
