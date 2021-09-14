@@ -4,10 +4,12 @@ Your code goes in this file
 --------------------------------------------------------------
 */
 let root = document.querySelector("#root");
-root.style.display = "flex";
-root.style.flexDirection = "column";
+ 
 
 const body =document.body;
+body.style.display = "flex";
+body.style.flexDirection = "column";
+body.style.justifyContent = "space-between";   
 const newHeading = document.createElement('div');
 body.append(newHeading);
 newHeading.textContent = "BLING!";
@@ -32,8 +34,7 @@ let leftDiv = document.createElement('div');
 mainDiv.append(leftDiv);
 //leftDiv.textContent = "hello";
 //leftDiv.style.cssText = "width:55%; height: 500px; "
-leftDiv.style.width = "55%";
-leftDiv.style.height = "500px";
+leftDiv.style.width = "70%";
 let para = document.createElement('h3');
 leftDiv.append(para);
 para.textContent = "Sizzle Your Life"
@@ -270,9 +271,9 @@ selectBackground.style.backgroundColor = "#403e38";
 
 
 //Tomota
-let Tomota = document.createElement("option");
-selectBackground.append(Tomota);
-Tomota.textContent = "Tomota";
+let Tomato = document.createElement("option");
+selectBackground.append(Tomato);
+Tomato.textContent = "Tomato";
 //selectBackground.style.cssText = "margin-top: 30px; margin-left: 20px; height : 40px; border: 2px solid black; box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.95); border-radius:10px; width:110px; color:white "
 selectBackground.style.marginTop = "30px";
 selectBackground.style.marginLeft = "20px";
@@ -424,11 +425,13 @@ img.style.cssText = "width:20px; height:20px"
 let rightDiv = document.createElement('div');
 mainDiv.append(rightDiv);
 //rightDiv.textContent = "hi";
-rightDiv.style.cssText = "width:45%; height: 400px; "
+rightDiv.style.cssText = "display: flex; width:25%;  "
+// rightDiv.style.display = "flex";
+rightDiv.style.flexDirection = "column";
 //right sub div
 const rightsubdiv = document.createElement('div')
 rightDiv.append(rightsubdiv);
-rightsubdiv.style.height = "80px";
+
 
 //adding Font to right sub Div
 
@@ -439,13 +442,11 @@ rightsubdiv.append(largerFont);
 largerFont.style.fontSize = "4.5em";
 largerFont.style.fontFamily = "Gill Sans"
 largerFont.style.fontWeight = "bolder"
-largerFont.style.marginTop = "60px"
-largerFont.style.marginLeft = "200px"
 largerFont.style.color = "#403e38"
+largerFont.style.marginLeft = "30px"
 //right sub div two
 const rightsubdivtwo = document.createElement('div');
 rightDiv.append(rightsubdivtwo);
-rightsubdivtwo.style.height = "200px";
 rightsubdivtwo.style.position = "relative"
 //ightsubdivtwo.display = "flex"
 
@@ -459,12 +460,11 @@ rightsubdivtwo.style.position = "relative"
 //blob image
 let blobimage  = document.createElement('img');
 rightsubdivtwo.append(blobimage);
-blobimage.src = "assets/images/blob.png" ;
-blobimage.style.width = "20em";
-blobimage.style.height = "20em";
-blobimage.style.marginLeft = "160px";
-blobimage.style.marginTop = "-40px";
 blobimage.style.position = "relative";
+blobimage.src = "assets/images/blob.png" ;
+blobimage.style.width = "21em";
+blobimage.style.marginLeft ="auto";
+blobimage.style.marginRight ="auto";
 blobimage.style.visibility = "hidden";
 
 
@@ -476,18 +476,22 @@ rightsubdivtwo.append(randomImage);
 randomImage.src = "assets/images/polaroid.png" ;
 randomImage.style.position = "absolute";
 randomImage.style.width = "10em";
-randomImage.style.right = "10em";
-randomImage.style.top = "3em";
+randomImage.style.right = "6em";
+randomImage.style.top = "6em";
 randomImage.style.visibility = "hidden";
+
 
 
 //additional div for adding images
 let secondDiv = document.createElement('div');
 body.append(secondDiv);
-secondDiv.style.height = "auto";
 secondDiv.style.display = "flex";
 secondDiv.style.flexWrap = "wrap";
-secondDiv.style.flexGrow = "1"
+secondDiv.style.flexGrow = "1";
+secondDiv.style.marginTop = "2em";
+secondDiv.style.marginBottom = "2em";
+secondDiv.style.padding = "2em";
+secondDiv.style.margin = "0 5em"
 secondDiv.style.justifyContent = "space-around";
 
 
@@ -495,14 +499,32 @@ secondDiv.style.justifyContent = "space-around";
 
 submit.addEventListener('click',(e)=>{
     let divElements = document.createElement('div');
-    secondDiv.append(divElements);
-    //divElements.style.flexShrink = "0"
     divElements.innerHTML = rightDiv.innerHTML;
+    secondDiv.append(divElements);
+
+    //divElements.style.flexShrink = "0"
     e.preventDefault();
-    divElements.style.cssText = "width:45%; height: 500px;"
-    // divElements.style.width = "23vw";
-    // divElements.style.height = "23vw";
+    
+    //  divElements.style.width = "23vw";
+    //  divElements.style.height = "23vw";
     divElements.style.border = "solid 1px black";
+    divElements.style.boxShadow = "3px 3px 2px #262626"
+    divElements.style.marginBottom = "2em";
+    divElements.style.marginLeft = "2em";
+    divElements.style.position = "relative";
+    divElements.style.backgroundColor = selectBackground.value;
+    let deleteButton = document.createElement('img')
+    divElements.append(deleteButton)
+    deleteButton.style.position = "absolute";
+    deleteButton.src = "assets/images/icon_delete.png"
+    deleteButton.style.width = "50px"
+    deleteButton.style.top = "-20px";
+    deleteButton.style.right = "-20px";
+    deleteButton.style.width = "3em"
+    deleteButton.onclick = ()=>{
+        divElements.remove()
+    }
+
 });
 
 
@@ -542,10 +564,10 @@ Bling.onkeyup = ()=>{
 blobone.onchange =() =>{
 
     blobimage.src = "assets/images/blob.png" ;
-    blobimage.style.width = "20em";
-    blobimage.style.height = "20em";
-    blobimage.style.marginLeft = "160px";
-    blobimage.style.marginTop = "-40px";
+    blobimage.style.width = "21em";
+    blobimage.style.marginLeft ="auto";
+    blobimage.style.marginRight ="auto";
+    
     blobimage.style.visibility = "visible";
      
 }
@@ -563,8 +585,8 @@ poloroid.addEventListener('click', (e)=>{
     //changeImage.style.backgroundImage = "url(assets/images/poloroid.png) no-repeat" 
     randomImage.src = "assets/images/polaroid.png" ;
     randomImage.style.width = "10em";
-    randomImage.style.right = "15em";
-    randomImage.style.top = "3em";
+    randomImage.style.right = "5em";
+    randomImage.style.top = "6em";
     randomImage.style.visibility = "visible";
     e.preventDefault();
     poloroid.style.backgroundColor = "#403e38";
@@ -577,9 +599,9 @@ poloroid.addEventListener('click', (e)=>{
 TV.addEventListener('click', (e)=>{
     //changeImage.style.backgroundImage = "url(assets/images/poloroid.png) no-repeat" 
     randomImage.src = "assets/images/tv.png" ;
-    randomImage.style.width = "10em";
-    randomImage.style.right = "16em";
-    randomImage.style.top = "4em";
+    randomImage.style.width = "9em";
+    randomImage.style.right = "7em";
+    randomImage.style.top = "6em";
     randomImage.style.visibility = "visible";
     e.preventDefault();
     TV.style.backgroundColor = "#403e38";
@@ -592,9 +614,9 @@ TV.addEventListener('click', (e)=>{
 Traitor.addEventListener('click', (e)=>{
     //changeImage.style.backgroundImage = "url(assets/images/poloroid.png) no-repeat" 
     randomImage.src = "assets/images/among-us.png" ;
-    randomImage.style.width = "10em";
-    randomImage.style.right = "16px";
-    randomImage.style.top = "3em";
+    randomImage.style.width = "11em";
+    randomImage.style.right = "7em";
+    randomImage.style.top = "5em";
     randomImage.style.visibility = "visible";
     e.preventDefault();
     Traitor.style.backgroundColor = "#403e38";
@@ -607,9 +629,9 @@ Traitor.addEventListener('click', (e)=>{
 Fallguy.addEventListener('click', (e)=>{
     //changeImage.style.backgroundImage = "url(assets/images/poloroid.png) no-repeat" 
     randomImage.src = "assets/images/fall-guy-01.png" ;
-    randomImage.style.width = "10em";
-    randomImage.style.right = "16em";
-    randomImage.style.top = "3em";
+    randomImage.style.width = "9em";
+    randomImage.style.right = "7.5em";
+    randomImage.style.top = "6em";
     randomImage.style.visibility = "visible";
     e.preventDefault();
     Fallguy.style.backgroundColor = "#403e38";
@@ -622,9 +644,9 @@ Fallguy.addEventListener('click', (e)=>{
 Radio.addEventListener('click', (e)=>{
     //changeImage.style.backgroundImage = "url(assets/images/poloroid.png) no-repeat" 
     randomImage.src = "assets/images/radio-02.png" ;
-    randomImage.style.width = "10em";
-    randomImage.style.right = "16em";
-    randomImage.style.top = "4em";
+    randomImage.style.width = "8.8em";
+    randomImage.style.right = "7em";
+    randomImage.style.top = "7em";
     randomImage.style.visibility = "visible";
     e.preventDefault();
     Radio.style.backgroundColor = "#403e38";
