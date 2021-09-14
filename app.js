@@ -8,9 +8,15 @@ const body =document.body;
 const newHeading = document.createElement('div');
 body.append(newHeading);
 newHeading.textContent = "BLING!";
-newHeading.style.cssText = "color : black; font-size:24px; text-align: center; padding-top:20px; font-weight: bold; text-shadow: 2px 2px 2px #CE5937; font-family:sans-serif;"
-// newHeading.style.color = "black";
-// newHeading.style.fontSize = "24px"
+//newHeading.style.cssText = "color : black; font-size:24px; text-align: center; padding-top:20px; font-weight: bold; text-shadow: 2px 2px 2px #CE5937; font-family:sans-serif;"
+ newHeading.style.color = "black";
+ newHeading.style.fontSize = "24px"
+newHeading.style.textAlign = "center";
+newHeading.style.paddingTop = "20px";
+newHeading.style.fontWeight = "bold";
+newHeading.style.textShadow = "2px 2px 2px #CE5937";
+newHeading.style.fontFamily = "sansSerif"
+
 let bodyColor = document.querySelector("body");
 bodyColor.style.backgroundColor="#f2ca16";
 
@@ -20,7 +26,9 @@ mainDiv.style.display = "flex";
 let leftDiv = document.createElement('div');
 mainDiv.append(leftDiv);
 //leftDiv.textContent = "hello";
-leftDiv.style.cssText = "width:55%; height: 500px; "
+//leftDiv.style.cssText = "width:55%; height: 500px; "
+leftDiv.style.width = "55%";
+leftDiv.style.height = "500px";
 let para = document.createElement('h3');
 leftDiv.append(para);
 para.textContent = "Sizzle Your Life"
@@ -221,13 +229,46 @@ img.style.cssText = "width:20px; height:20px"
 
 let rightDiv = document.createElement('div');
 mainDiv.append(rightDiv);
-rightDiv.textContent = "hi";
+//rightDiv.textContent = "hi";
 rightDiv.style.cssText = "width:45%; height: 500px; "
+//right sub div
+const rightsubdiv =document.createElement('div')
+rightDiv.append(rightsubdiv);
+rightsubdiv.style.height = "150px";
+
+//adding Font to right sub Div
+
+let largerFont = document.createElement('h1');
+rightsubdiv.append(largerFont);
+//change here.............................
+largerFont.textContent = "Bling!!";
+largerFont.style.fontSize = "5em";
+largerFont.style.fontFamily = "Gill Sans"
+largerFont.style.fontWeight = "bolder"
+largerFont.style.marginTop = "60px"
+largerFont.style.marginLeft = "200px"
+largerFont.style.color = "#403e38"
+//right sub div two
+const rightsubdivtwo = document.createElement('div');
+rightDiv.append(rightsubdivtwo);
+rightsubdivtwo.style.height = "350px";
+rightsubdivtwo.display = "flex"
+
+//adding image by the button events
+let changeImage = document.createElement('img');
+rightsubdivtwo.append(changeImage);
+changeImage.src = "assets/images/among-us.png";
+changeImage.style.width = "134px";
+changeImage.style.height = "134px"
+changeImage.style.marginLeft = "270px"
+changeImage.style.marginTop = "5px"
+
 
 //additional div for adding images
 const secondDiv = document.createElement('div');
 body.append(secondDiv);
 secondDiv.style.height = "300px";
+
 
 const footer = document.createElement('div');
 body.append(footer);
@@ -243,5 +284,12 @@ footerword.style.wordSpacing = "15px";
 footerword.style.fontFamily = "sans-serif";
 footerword.style.fontWeight = "600";
 footerword.style.fontSize = "15px";
+
+//changing the color functionality
+
+selectBackground.onchange = () =>{
+    body.style.backgroundColor = selectBackground.value;
+
+}
 
 
