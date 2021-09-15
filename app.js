@@ -11,18 +11,22 @@ body.style.display = "flex";
 body.style.flexDirection = "column";
 body.style.justifyContent = "space-between"; 
 body.style.fontFamily = "Montserrat"
+body.style.width = "auto"
 
 const newHeading = document.createElement('div');
 body.append(newHeading);
 newHeading.textContent = "BLING!";
+newHeading.style.display = "flex"
 //newHeading.style.cssText = "color : black; font-size:24px; text-align: center; padding-top:20px; font-weight: bold; text-shadow: 2px 2px 2px #CE5937; font-family:sans-serif;"
  newHeading.style.color = "black";
  newHeading.style.fontSize = "24px"
 newHeading.style.textAlign = "center";
+newHeading.style.justifyContent = "center"
 newHeading.style.paddingTop = "20px";
 newHeading.style.fontWeight = "bold";
 newHeading.style.textShadow = "2px 2px 2px #CE5937";
 newHeading.style.fontFamily = "sansSerif";
+// newHeading.style.marginLeft = "0px"
 
 
 
@@ -32,19 +36,23 @@ bodyColor.style.backgroundColor="gold";
 const mainDiv = document.createElement("div");
 body.append(mainDiv);
 mainDiv.style.display = "flex";
+mainDiv.style.flexDirection = "row"
+mainDiv.style.justifyContent = "space-evenly"
 let leftDiv = document.createElement('div');
 mainDiv.append(leftDiv);
 //mainDiv.style.flexWrap = "wrap"
 //leftDiv.textContent = "hello";
 //leftDiv.style.cssText = "width:55%; height: 500px; "
-leftDiv.style.width = "70%";
+leftDiv.style.width = "55vw";
+leftDiv.style.alignSelf = "auto"
+leftDiv.style.marginLeft = "0px"
 let para = document.createElement('h3');
 leftDiv.append(para);
 para.textContent = "Sizzle Your Life"
 //para.style.cssText = "margin-top:80px; font-size: 22px; margin-left: 120px; font-family: Helvetica; font-weight:lighter"
 para.style.marginTop = "80px";
 para.style.fontSize = "22px";
-para.style.marginLeft = "120px";
+// para.style.marginLeft = "120px";
 para.style.fontFamily = "Helvetica";
 para.style.fontWeight = "lighter";
 
@@ -56,7 +64,7 @@ boldpara.textContent = "Make A Card";
 boldpara.style.marginTop = "15px";
 boldpara.style.fontSize = "45px";
 boldpara.style.fontWeight = "bold";
-boldpara.style.marginLeft = "120px";
+// boldpara.style.marginLeft = "120px";
 boldpara.style.fontFamily = "sans-serif";
 
 let form = document.createElement('form');
@@ -71,7 +79,7 @@ form.append(poloroid)
 poloroid.textContent = "Polaroid"
 //poloroid.style.cssText = "margin-top: 30px; margin-left: 120px; height : 40px; border: 2px solid black; box-shadow: 5px 5px 4px 0px rgba(0,0,0,0.95); border-radius:10px; width:75px;  "
 poloroid.style.marginTop = "30px";
-poloroid.style.marginLeft = "120px";
+// poloroid.style.marginLeft = "120px";
 poloroid.style.height = "40px";
 poloroid.style.border = "2px solid black";
 poloroid.style.boxShadow = "5px 5px 4px 0px rgba(0,0,0,0.95)"
@@ -79,6 +87,7 @@ poloroid.style.borderRadius = "10px";
 poloroid.style.width = "75px"
 
 poloroid.style.backgroundColor = "inherit";
+poloroid.name='poloroid'
 //button2
 let TV = document.createElement('button');
 form.append(TV)
@@ -91,7 +100,7 @@ TV.style.border = "2px solid black";
 TV.style.boxShadow = "5px 5px 4px 0px rgba(0,0,0,0.95)";
 TV.style.borderRadius = "10px";
 TV.style.width = "45px";
-
+TV.name='tv'
 TV.style.backgroundColor = "inherit";
 //button3
 let Traitor = document.createElement('button');
@@ -105,6 +114,7 @@ Traitor.style.border = "2px solid black";
 Traitor.style.boxShadow = "5px 5px 4px 0px rgba(0,0,0,0.95)";
 Traitor.style.borderRadius = "10px";
 Traitor.style.width = "65px";
+Traitor.name='traitor'
 
 Traitor.style.backgroundColor = "inherit";
 //button4
@@ -119,7 +129,7 @@ Fallguy.style.border = "2px solid black";
 Fallguy.style.boxShadow = "5px 5px 4px 0px rgba(0,0,0,0.95)";
 Fallguy.style.borderRadius = "10px";
 Fallguy.style.width = "75px";
-
+Fallguy.name='fallguy'
 Fallguy.style.backgroundColor = "inherit";
 //button5
 let Radio = document.createElement('button');
@@ -133,7 +143,7 @@ Radio.style.border = "2px solid black";
 Radio.style.boxShadow = "5px 5px 4px 0px rgba(0,0,0,0.95)";
 Radio.style.borderRadius = "10px";
 Radio.style.width = "75px";
-
+Radio.name='radio'
 Radio.style.backgroundColor = "inherit";
 
 //next form 
@@ -150,7 +160,7 @@ Bling.placeholder = "  Name your Bling!"
 Bling.textContent = "Bling!!"
 //Bling.style.cssText = "margin-top: 30px; margin-left: 120px; height : 40px; border: 2px solid black; box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.95); border-radius:10px; width:160px; color:white "
 Bling.style.marginTop = "30px";
-Bling.style.marginLeft = "120px";
+// Bling.style.marginLeft = "120px";
 Bling.style.height = "40px";
 Bling.style.border = "2px solid black";
 Bling.style.boxShadow = "3px 3px 4px 0px rgba(0,0,0,0.95)";
@@ -411,7 +421,7 @@ thirdform.append(submit);
 submit.type = "submit";
 //submit.style.cssText = "margin-top: 30px; margin-left: 120px; height : 45px; border: 2px solid black; box-shadow: 5px 5px 4px 0px rgba(0,0,0,0.90); border-radius:7px; width:45px; cursor : pointer "
 submit.style.marginTop = "30px";
-submit.style.marginLeft = "120px";
+// submit.style.marginLeft = "120px";
 submit.style.height = "45px";
 submit.style.border = "2px solid black";
 submit.style.boxShadow = "5px 5px 4px 0px rgba(0,0,0,0.90)";
@@ -431,7 +441,10 @@ img.style.cssText = "width:20px; height:20px"
 let rightDiv = document.createElement('div');
 mainDiv.append(rightDiv);
 //rightDiv.textContent = "hi";
-rightDiv.style.cssText = "display: flex; width:25%;  "
+rightDiv.style.cssText = "display: flex; width:auto;  "
+rightDiv.style.marginRight = "0px"
+rightDiv.style.alignSelf = "auto";
+  
 // rightDiv.style.display = "flex";
 rightDiv.style.flexDirection = "column";
 //right sub div
@@ -537,7 +550,7 @@ submit.addEventListener('click',(e)=>{
 
 const footer = document.createElement('div');
 body.append(footer);
-footer.style.height = "50px";
+footer.style.height = "25px";
 //footer.style.width = "50%"
 footer.style.display = "flex";
 //footer.style.textAlign = "center";
@@ -549,13 +562,14 @@ footer.style.justifyContent = "center"
 // //footer
  
 //creditLink
- let creditLink = document.createElement('a');
+ let creditLink = document.createElement('p');
  footer.append(creditLink);
  creditLink.textContent= "🖤Credits:";
  creditLink.style.fontFamily = "sans-serif";
  creditLink.style.fontWeight = "600";
  creditLink.style.fontSize = "15px";
  creditLink.style.cursor = "pointer"
+ creditLink.classList.add('links');
 
 
 //polaroid link
@@ -566,7 +580,14 @@ footer.style.justifyContent = "center"
  poloroidLink.style.fontFamily = "sans-serif";
  poloroidLink.style.fontWeight = "600";
  poloroidLink.style.fontSize = "15px";
- poloroidLink.style.cursor = "pointer"
+ poloroidLink.style.cursor = "pointer" 
+ poloroidLink.href = "https://s3-alpha.figma.com/hub/file/996219503/3412726a-7535-4715-b194-6cf2824fc294-cover.png"
+ poloroidLink.classList.add('links');
+ poloroidLink.style.textDecoration = "none";
+ poloroidLink.style.color = "black"
+
+ 
+
 
  //tvlink
  let tvLink = document.createElement('a');
@@ -577,6 +598,11 @@ footer.style.justifyContent = "center"
  tvLink.style.fontWeight = "600";
  tvLink.style.fontSize = "15px";
  tvLink.style.cursor = "pointer"
+ tvLink.href = "https://s3-alpha.figma.com/hub/file/947698976/702502dc-125c-4d7e-a30d-2cf2668b7d46-cover.png"
+ tvLink.classList.add('links');
+ tvLink.style.textDecoration = "none";
+ tvLink.style.color = "black"
+
 
  //traitorLink
  let traitorLink = document.createElement('a');
@@ -587,6 +613,11 @@ footer.style.justifyContent = "center"
  traitorLink.style.fontWeight = "600";
  traitorLink.style.fontSize = "15px";
  traitorLink.style.cursor = "pointer"
+ traitorLink.href = "https://s3-alpha.figma.com/hub/file/708355479/521c7625-316f-4011-9b50-1089c4e60af8-cover.png"
+ traitorLink.classList.add('links');
+ traitorLink.style.textDecoration = "none";
+ traitorLink.style.color = "black"
+
 
  //fallguy link
  let fallguyLink = document.createElement('a');
@@ -597,6 +628,11 @@ footer.style.justifyContent = "center"
  fallguyLink.style.fontWeight = "600";
  fallguyLink.style.fontSize = "15px";
  fallguyLink.style.cursor = "pointer"
+ fallguyLink.href = "https://s3-alpha.figma.com/hub/file/1111623163/d209b12e-2b12-4a2b-925a-908f6623b70b-cover.png"
+ fallguyLink.classList.add('links');
+ fallguyLink.style.textDecoration = "none";
+ fallguyLink.style.color = "black"
+
 
  //radio Link
  let radioLink = document.createElement('a');
@@ -607,6 +643,10 @@ footer.style.justifyContent = "center"
  radioLink.style.fontWeight = "600";
  radioLink.style.fontSize = "15px";
  radioLink.style.cursor = "pointer"
+ radioLink.href = "https://s3-alpha.figma.com/hub/file/996219503/3412726a-7535-4715-b194-6cf2824fc294-cover.png"
+ radioLink.classList.add('links');
+ radioLink.style.textDecoration = "none";
+ radioLink.style.color = "black"
 
 
 
@@ -652,7 +692,8 @@ radiotwo.onchange = () =>{
 }
 //5  images to display
 
-
+let button_status=[false,false,false,false,false];
+let current_button=''
 
 //polaroid
 poloroid.addEventListener('click', (e)=>{
@@ -663,8 +704,27 @@ poloroid.addEventListener('click', (e)=>{
     randomImage.style.top = "6em";
     randomImage.style.visibility = "visible";
     e.preventDefault();
-    poloroid.style.backgroundColor = "#403e38";
-    poloroid.style.color = "white";
+    if(button_status[0]){
+        poloroid.style.backgroundColor = "inherit";
+        poloroid.style.color = "black";
+        button_status[0]=false
+        randomImage.style.visibility = "hidden";
+    }else{
+        poloroid.style.backgroundColor = "#403e38";
+        poloroid.style.color = "white";
+        TV.style.backgroundColor = "inherit";
+        TV.style.color = "black";
+        Traitor.style.backgroundColor = "inherit";
+        Traitor.style.color = "black";
+        Fallguy.style.backgroundColor = "inherit";
+        Fallguy.style.color = "black";
+        Radio.style.backgroundColor = "inherit";
+        Radio.style.color = "black";
+        
+        button_status[0]=true
+    }
+    
+    poloroid.classList.add('buttons')
 
     
 });
@@ -678,8 +738,25 @@ TV.addEventListener('click', (e)=>{
     randomImage.style.top = "6em";
     randomImage.style.visibility = "visible";
     e.preventDefault();
-    TV.style.backgroundColor = "#403e38";
-    TV.style.color = "white";
+    if(button_status[1]){
+        TV.style.backgroundColor = "inherit";
+        TV.style.color = "black";
+        button_status[1]=false
+        randomImage.style.visibility = "hidden";
+    }else{
+        TV.style.backgroundColor = "#403e38";
+        TV.style.color = "white";
+        poloroid.style.backgroundColor = "inherit";
+        poloroid.style.color = "black";
+        Traitor.style.backgroundColor = "inherit";
+        Traitor.style.color = "black";
+        Fallguy.style.backgroundColor = "inherit";
+        Fallguy.style.color = "black";
+        Radio.style.backgroundColor = "inherit";
+        Radio.style.color = "black";
+        button_status[1]=true
+    }
+    TV.classList.add('buttons')
     
 });
 
@@ -693,9 +770,31 @@ Traitor.addEventListener('click', (e)=>{
     randomImage.style.top = "5em";
     randomImage.style.visibility = "visible";
     e.preventDefault();
-    Traitor.style.backgroundColor = "#403e38";
-    Traitor.style.color = "white";
+    if(button_status[2]){
+        Traitor.style.backgroundColor = "inherit";
+        Traitor.style.color = "black";
+        button_status[2]=false;
+        randomImage.style.visibility = "hidden";
+
+    }else{
+        Traitor.style.backgroundColor = "#403e38";
+        Traitor.style.color = "white";
+        Fallguy.style.backgroundColor = "inherit";
+        Fallguy.style.color = "black";
+        Radio.style.backgroundColor = "inherit";
+        Radio.style.color = "black";
+        poloroid.style.backgroundColor = "inherit";
+        poloroid.style.color = "black";
+        TV.style.backgroundColor = "inherit";
+        TV.style.color = "black";
+        button_status[2] = true;
+
+    }
     
+    Traitor.classList.add('buttons')
+    
+
+
 });
 
 //Fall Guy
@@ -708,8 +807,29 @@ Fallguy.addEventListener('click', (e)=>{
     randomImage.style.top = "6em";
     randomImage.style.visibility = "visible";
     e.preventDefault();
-    Fallguy.style.backgroundColor = "#403e38";
-    Fallguy.style.color = "white";
+    if(button_status[3]){
+        Fallguy.style.backgroundColor = "inherit";
+        Fallguy.style.color = "black";
+        button_status[3]=false;
+        randomImage.style.visibility = "hidden";
+
+    }else{
+        Fallguy.style.backgroundColor = "#403e38";
+        Fallguy.style.color = "white";
+
+        Radio.style.backgroundColor = "inherit";
+        Radio.style.color = "black";
+        poloroid.style.backgroundColor = "inherit";
+        poloroid.style.color = "black";
+        TV.style.backgroundColor = "inherit";
+        TV.style.color = "black";
+        Traitor.style.backgroundColor = "inherit";
+        Traitor.style.color = "black";
+        button_status[3] = true;
+
+    }
+    
+    Fallguy.classList.add('buttons')
     
 });
 
@@ -723,7 +843,72 @@ Radio.addEventListener('click', (e)=>{
     randomImage.style.top = "7em";
     randomImage.style.visibility = "visible";
     e.preventDefault();
-    Radio.style.backgroundColor = "#403e38";
-    Radio.style.color = "white";
+    if(button_status[4]){
+        Radio.style.backgroundColor = "inherit";
+        Radio.style.color = "black";
+        button_status[4]=false;
+        randomImage.style.visibility = "hidden";
+
+    }else{
+        Radio.style.backgroundColor = "#403e38";
+        Radio.style.color = "white";
+
+        Fallguy.style.backgroundColor = "inherit";
+        Fallguy.style.color = "black";
+        poloroid.style.backgroundColor = "inherit";
+        poloroid.style.color = "black";
+        TV.style.backgroundColor = "inherit";
+        TV.style.color = "black";
+        Traitor.style.backgroundColor = "inherit";
+        Traitor.style.color = "black";
+        button_status[4] = true;
+
+    }
+    
+    Radio.classList.add('buttons')
     
 });
+
+  const style = document.createElement('style');
+  style.innerHTML = `
+      .links+a:hover{
+         border-bottom:3px solid black; 
+      }
+  `
+  body.appendChild(style);
+
+  let x =window.matchMedia("(max-width: 768px)")
+  ipadResponsive(x);
+  x.addListener(ipadResponsive);
+  function ipadResponsive(x) {
+      if(x.matches){
+          /* leftContainer.style.marginLeft = "0"
+          leftContainer.style.width = "auto";
+          hero.style.justifyContent = "space-between" */
+          mainDiv.style.flexDirection = "column";
+          rightDiv.style.alignSelf = "center";
+          leftDiv.style.alignSelf = "center"
+          //randomImage.style.right = "-3em";
+          body.style.width = "100%";
+          mainDiv.style.justifyContent = "center"
+          newHeading.style.justifyContent = "center"
+          //rightDiv.style.marginRight = "80px"
+          //leftDiv.style.marginLeft = "70px"
+          
+      }
+      else{
+          mainDiv.style.flexDirection = "row";
+          leftDiv.style.alignSelf = "auto"
+          rightDiv.style.alignSelf = "auto";
+          //randomImage.style.right = "7em";
+          body.style.width = "auto";
+          mainDiv.style.justifyContent = "space-evenly"
+          newHeading.style.justifyContent = "center"
+          //rightDiv.style.marginRight = "0px"
+          //leftDiv.style.marginLeft = "0px"
+          
+
+  
+      }
+  }
+
