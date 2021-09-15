@@ -9,7 +9,9 @@ let root = document.querySelector("#root");
 const body =document.body;
 body.style.display = "flex";
 body.style.flexDirection = "column";
-body.style.justifyContent = "space-between";   
+body.style.justifyContent = "space-between"; 
+body.style.fontFamily = "Montserrat"
+
 const newHeading = document.createElement('div');
 body.append(newHeading);
 newHeading.textContent = "BLING!";
@@ -25,13 +27,14 @@ newHeading.style.fontFamily = "sansSerif";
 
 
 let bodyColor = document.querySelector("body");
-bodyColor.style.backgroundColor="#f2ca16";
+bodyColor.style.backgroundColor="gold";
 
 const mainDiv = document.createElement("div");
 body.append(mainDiv);
 mainDiv.style.display = "flex";
 let leftDiv = document.createElement('div');
 mainDiv.append(leftDiv);
+//mainDiv.style.flexWrap = "wrap"
 //leftDiv.textContent = "hello";
 //leftDiv.style.cssText = "width:55%; height: 500px; "
 leftDiv.style.width = "70%";
@@ -59,6 +62,8 @@ boldpara.style.fontFamily = "sans-serif";
 let form = document.createElement('form');
 leftDiv.append(form);
 form.style.display = "flex";
+form.style.flexWrap = "wrap"
+
 //form contains 5 elements
 //button1
 let poloroid = document.createElement('button');
@@ -136,6 +141,7 @@ Radio.style.backgroundColor = "inherit";
 let secondform = document.createElement('form');
 leftDiv.append(secondform);
 secondform.style.display = "flex";
+secondform.style.width = "70em"
 
 //first 
 let Bling = document.createElement('input');
@@ -440,7 +446,7 @@ rightsubdiv.append(largerFont);
 //change here.............................
 //largerFont.textContent = "Bling!!";
 largerFont.style.fontSize = "4.5em";
-largerFont.style.fontFamily = "Gill Sans"
+largerFont.style.fontFamily = "Montserrat"
 largerFont.style.fontWeight = "bolder"
 largerFont.style.color = "#403e38"
 largerFont.style.marginLeft = "30px"
@@ -493,7 +499,7 @@ secondDiv.style.marginBottom = "2em";
 secondDiv.style.padding = "2em";
 secondDiv.style.margin = "0 5em"
 secondDiv.style.justifyContent = "space-around";
-
+secondDiv.style.minHeight = "320px"
 
 //div elements
 
@@ -532,17 +538,85 @@ submit.addEventListener('click',(e)=>{
 const footer = document.createElement('div');
 body.append(footer);
 footer.style.height = "50px";
-footer.display = "flex";
-footer.style.textAlign = "center";
+//footer.style.width = "50%"
+footer.style.display = "flex";
+//footer.style.textAlign = "center";
+//footer.style.bottom = "1px"
+footer.style.justifyContent = "center"
+// footer.style.justifyContent = "space-evenly"
+// footer.style.marginLeft = "32em"
+// footer.style.marginRight = "32em"
+// //footer
+ 
+//creditLink
+ let creditLink = document.createElement('a');
+ footer.append(creditLink);
+ creditLink.textContent= "🖤Credits:";
+ creditLink.style.fontFamily = "sans-serif";
+ creditLink.style.fontWeight = "600";
+ creditLink.style.fontSize = "15px";
+ creditLink.style.cursor = "pointer"
 
-//footer
- let footerword = document.createElement('p');
- footer.append(footerword);
-footerword.textContent = " 🖤Credits:  Poloroid  TV  Traitor FallGuy   Radio";
-footerword.style.wordSpacing = "15px";
-footerword.style.fontFamily = "sans-serif";
-footerword.style.fontWeight = "600";
-footerword.style.fontSize = "15px";
+
+//polaroid link
+ let poloroidLink = document.createElement('a');
+ footer.append(poloroidLink);
+ poloroidLink.textContent= "Polaroid";
+ poloroidLink.style.marginLeft = "20px"
+ poloroidLink.style.fontFamily = "sans-serif";
+ poloroidLink.style.fontWeight = "600";
+ poloroidLink.style.fontSize = "15px";
+ poloroidLink.style.cursor = "pointer"
+
+ //tvlink
+ let tvLink = document.createElement('a');
+ footer.append(tvLink);
+ tvLink.textContent= "TV";
+ tvLink.style.marginLeft = "20px"
+ tvLink.style.fontFamily = "sans-serif";
+ tvLink.style.fontWeight = "600";
+ tvLink.style.fontSize = "15px";
+ tvLink.style.cursor = "pointer"
+
+ //traitorLink
+ let traitorLink = document.createElement('a');
+ footer.append(traitorLink);
+ traitorLink.textContent= "traitor";
+ traitorLink.style.marginLeft = "20px";
+ traitorLink.style.fontFamily = "sans-serif";
+ traitorLink.style.fontWeight = "600";
+ traitorLink.style.fontSize = "15px";
+ traitorLink.style.cursor = "pointer"
+
+ //fallguy link
+ let fallguyLink = document.createElement('a');
+ footer.append(fallguyLink);
+ fallguyLink.textContent= "fallGuy";
+ fallguyLink.style.marginLeft = "20px";
+ fallguyLink.style.fontFamily = "sans-serif";
+ fallguyLink.style.fontWeight = "600";
+ fallguyLink.style.fontSize = "15px";
+ fallguyLink.style.cursor = "pointer"
+
+ //radio Link
+ let radioLink = document.createElement('a');
+ footer.append(radioLink);
+ radioLink.textContent= "Radio";
+ radioLink.style.marginLeft = "20px";
+ radioLink.style.fontFamily = "sans-serif";
+ radioLink.style.fontWeight = "600";
+ radioLink.style.fontSize = "15px";
+ radioLink.style.cursor = "pointer"
+
+
+
+//footerword.textContent = " 🖤Credits:  Poloroid  TV  Traitor FallGuy   Radio";
+
+// footerword.style.wordSpacing = "15px";
+// footerword.style.fontFamily = "sans-serif";
+// footerword.style.fontWeight = "600";
+// footerword.style.fontSize = "15px";
+
 
 
 
