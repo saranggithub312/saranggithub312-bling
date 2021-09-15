@@ -519,7 +519,7 @@ secondDiv.style.marginBottom = "2em";
 secondDiv.style.padding = "2em";
 secondDiv.style.margin = "0 5em"
 secondDiv.style.justifyContent = "space-around";
-secondDiv.style.minHeight = "320px"
+secondDiv.style.minHeight = "100px"
 
 //div elements
 
@@ -527,6 +527,7 @@ submit.addEventListener('click',(e)=>{
     let divElements = document.createElement('div');
     divElements.innerHTML = rightDiv.innerHTML;
     secondDiv.append(divElements);
+    
 
     //divElements.style.flexShrink = "0"
     e.preventDefault();
@@ -536,8 +537,9 @@ submit.addEventListener('click',(e)=>{
     divElements.style.border = "solid 1px black";
     divElements.style.boxShadow = "3px 3px 2px #262626"
     divElements.style.marginBottom = "2em";
-    //divElements.style.marginLeft = "2em";
-    divElements.style.width = "282px"
+    divElements.style.marginLeft = "1em";
+    divElements.style.marginRight = "1em"
+    divElements.style.width = "280px"
     
     divElements.style.position = "relative";
     divElements.style.backgroundColor = selectBackground.value;
@@ -554,6 +556,15 @@ submit.addEventListener('click',(e)=>{
     }
 
 });
+
+submit.onmouseup = ()=>{
+    submit.style.backgroundColor = "inherit"
+}
+submit.onmousedown = () =>{
+    
+    submit.style.backgroundColor = "white"
+}
+
 
 
 
@@ -712,6 +723,7 @@ deleteCurrentButton = (currentChild) => {
 
 for(let image of form.children) {
     image.addEventListener('click', (e) => {
+        largerFont.textContent = "Stuff"
         randomImage.src = `/assets/images/${image.name}`;
         randomImage.style.visibility = "visible";
         e.preventDefault();
@@ -942,6 +954,7 @@ Radio.addEventListener('click', (e)=>{
           newHeading.style.justifyContent = "center"
           //rightDiv.style.marginRight = "80px"
           //leftDiv.style.marginLeft = "70px"
+          secondDiv.style.minHeight = "80px"
           
       }
       else{
@@ -955,6 +968,7 @@ Radio.addEventListener('click', (e)=>{
           newHeading.style.justifyContent = "center"
           //rightDiv.style.marginRight = "0px"
           //leftDiv.style.marginLeft = "0px"
+          secondDiv.style.minHeight = "100px"
           
 
   
@@ -997,7 +1011,7 @@ let y =window.matchMedia("(max-width: 320px)")
         Bling.style.marginRight = "22px"
         selectBackground.style.marginLeft = "0px";
         newForm.style.marginLeft = "0px";
-        divElements.style.width = "280px"
+        divElements.style.width = "270px"
         blobimage.style.width = "16em";
         footer.style.flexWrap = "wrap"
         deleteButton.style.top = "-20px";
@@ -1046,13 +1060,13 @@ let y =window.matchMedia("(max-width: 320px)")
         Bling.style.marginRight = "0px"
         selectBackground.style.marginLeft = "20px";
         newForm.style.marginLeft = "20px";
-        divElements.style.width = "300px"
+        //divElements.style.width = "300px"
         blobimage.style.width = "17em";
         footer.style.flexWrap = "nowrap"
         deleteButton.style.top = "-20px";
         deleteButton.style.right = "-20px";
         deleteButton.style.width = "3em"
-        divElements.style.width = "282px"
+        divElements.style.width = "280px"
   
       }
 }
