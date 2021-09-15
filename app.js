@@ -11,7 +11,8 @@ body.style.display = "flex";
 body.style.flexDirection = "column";
 body.style.justifyContent = "space-between"; 
 body.style.fontFamily = "Montserrat"
-body.style.width = "auto"
+//body.style.width = "auto"
+
 
 const newHeading = document.createElement('div');
 body.append(newHeading);
@@ -39,6 +40,7 @@ mainDiv.style.display = "flex";
 mainDiv.style.flexDirection = "row"
 mainDiv.style.justifyContent = "space-evenly"
 let leftDiv = document.createElement('div');
+mainDiv.style.width = "100%"
 mainDiv.append(leftDiv);
 //mainDiv.style.flexWrap = "wrap"
 //leftDiv.textContent = "hello";
@@ -151,7 +153,7 @@ Radio.style.backgroundColor = "inherit";
 let secondform = document.createElement('form');
 leftDiv.append(secondform);
 secondform.style.display = "flex";
-secondform.style.width = "70em"
+secondform.style.width = "35em"
 
 //first 
 let Bling = document.createElement('input');
@@ -888,8 +890,10 @@ Radio.addEventListener('click', (e)=>{
           mainDiv.style.flexDirection = "column";
           rightDiv.style.alignSelf = "center";
           leftDiv.style.alignSelf = "center"
+          mainDiv.style.width = "768px"
           //randomImage.style.right = "-3em";
           body.style.width = "100%";
+          //body.style.maxWidth = "768px"
           mainDiv.style.justifyContent = "center"
           newHeading.style.justifyContent = "center"
           //rightDiv.style.marginRight = "80px"
@@ -901,6 +905,7 @@ Radio.addEventListener('click', (e)=>{
           leftDiv.style.alignSelf = "auto"
           rightDiv.style.alignSelf = "auto";
           //randomImage.style.right = "7em";
+          mainDiv.style.width = "100%"
           body.style.width = "auto";
           mainDiv.style.justifyContent = "space-evenly"
           newHeading.style.justifyContent = "center"
@@ -910,5 +915,7 @@ Radio.addEventListener('click', (e)=>{
 
   
       }
+
+
   }
 
