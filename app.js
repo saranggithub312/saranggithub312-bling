@@ -365,7 +365,7 @@ newForm.style.height = "40px";
 newForm.style.border = "2px solid black";
 newForm.style.boxShadow = "3px 3px 4px 0px rgba(0,0,0,0.95)";
 newForm.style.borderRadius = "10px";
-newForm.style.width = "170px";
+newForm.style.width = "200px";
 newForm.style.color = "white";
 
 
