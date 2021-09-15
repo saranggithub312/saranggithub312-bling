@@ -72,7 +72,9 @@ boldpara.style.fontFamily = "sans-serif";
 let form = document.createElement('form');
 leftDiv.append(form);
 form.style.display = "flex";
-form.style.flexWrap = "wrap"
+form.style.flexWrap = "nowrap"
+form.style.alignContent = "flex-start"
+form.style.flexFlow = "row nowrap"
 
 //form contains 5 elements
 //button1
@@ -89,7 +91,7 @@ poloroid.style.borderRadius = "10px";
 poloroid.style.width = "75px"
 
 poloroid.style.backgroundColor = "inherit";
-poloroid.name='poloroid'
+poloroid.name='polaroid.png'
 //button2
 let TV = document.createElement('button');
 form.append(TV)
@@ -97,12 +99,13 @@ TV.textContent = "TV";
 //TV.style.cssText = "margin-top: 30px; margin-left: 16px; height : 40px; border: 2px solid black; box-shadow: 5px 5px 4px 0px rgba(0,0,0,0.95); border-radius:10px; width:45px;  "
 TV.style.marginTop = "30px";
 TV.style.marginLeft = "16px";
+TV.style.marginRight = "0px"
 TV.style.height = "40px";
 TV.style.border = "2px solid black";
 TV.style.boxShadow = "5px 5px 4px 0px rgba(0,0,0,0.95)";
 TV.style.borderRadius = "10px";
 TV.style.width = "45px";
-TV.name='tv'
+TV.name='tv.png'
 TV.style.backgroundColor = "inherit";
 //button3
 let Traitor = document.createElement('button');
@@ -116,7 +119,7 @@ Traitor.style.border = "2px solid black";
 Traitor.style.boxShadow = "5px 5px 4px 0px rgba(0,0,0,0.95)";
 Traitor.style.borderRadius = "10px";
 Traitor.style.width = "65px";
-Traitor.name='traitor'
+Traitor.name='among-us.png'
 
 Traitor.style.backgroundColor = "inherit";
 //button4
@@ -131,7 +134,7 @@ Fallguy.style.border = "2px solid black";
 Fallguy.style.boxShadow = "5px 5px 4px 0px rgba(0,0,0,0.95)";
 Fallguy.style.borderRadius = "10px";
 Fallguy.style.width = "75px";
-Fallguy.name='fallguy'
+Fallguy.name='fall-guy-01.png'
 Fallguy.style.backgroundColor = "inherit";
 //button5
 let Radio = document.createElement('button');
@@ -145,7 +148,7 @@ Radio.style.border = "2px solid black";
 Radio.style.boxShadow = "5px 5px 4px 0px rgba(0,0,0,0.95)";
 Radio.style.borderRadius = "10px";
 Radio.style.width = "75px";
-Radio.name='radio'
+Radio.name='radio-02.png'
 Radio.style.backgroundColor = "inherit";
 
 //next form 
@@ -154,12 +157,14 @@ let secondform = document.createElement('form');
 leftDiv.append(secondform);
 secondform.style.display = "flex";
 secondform.style.width = "35em"
+secondform.style.flexWrap = "nowrap"
 
 //first 
 let Bling = document.createElement('input');
 secondform.append(Bling)
 Bling.placeholder = "  Name your Bling!"
 Bling.textContent = "Bling!!"
+Bling.style.marginRight = "0px"
 //Bling.style.cssText = "margin-top: 30px; margin-left: 120px; height : 40px; border: 2px solid black; box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.95); border-radius:10px; width:160px; color:white "
 Bling.style.marginTop = "30px";
 // Bling.style.marginLeft = "120px";
@@ -483,7 +488,7 @@ let blobimage  = document.createElement('img');
 rightsubdivtwo.append(blobimage);
 blobimage.style.position = "relative";
 blobimage.src = "assets/images/blob.png" ;
-blobimage.style.width = "21em";
+blobimage.style.width = "19em";
 blobimage.style.marginLeft ="auto";
 blobimage.style.marginRight ="auto";
 blobimage.style.visibility = "hidden";
@@ -496,9 +501,9 @@ let randomImage = document.createElement('img');
 rightsubdivtwo.append(randomImage);
 randomImage.src = "assets/images/polaroid.png" ;
 randomImage.style.position = "absolute";
-randomImage.style.width = "10em";
-randomImage.style.right = "6em";
-randomImage.style.top = "6em";
+randomImage.style.width = "8.5em";
+randomImage.style.right = "5em";
+randomImage.style.top = "7em";
 randomImage.style.visibility = "hidden";
 
 
@@ -531,7 +536,9 @@ submit.addEventListener('click',(e)=>{
     divElements.style.border = "solid 1px black";
     divElements.style.boxShadow = "3px 3px 2px #262626"
     divElements.style.marginBottom = "2em";
-    divElements.style.marginLeft = "2em";
+    //divElements.style.marginLeft = "2em";
+    divElements.style.width = "282px"
+    
     divElements.style.position = "relative";
     divElements.style.backgroundColor = selectBackground.value;
     let deleteButton = document.createElement('img')
@@ -558,6 +565,7 @@ footer.style.display = "flex";
 //footer.style.textAlign = "center";
 //footer.style.bottom = "1px"
 footer.style.justifyContent = "center"
+ footer.style.flexWrap = "wrap"
 // footer.style.justifyContent = "space-evenly"
 // footer.style.marginLeft = "32em"
 // footer.style.marginRight = "32em"
@@ -680,7 +688,7 @@ Bling.onkeyup = ()=>{
 blobone.onchange =() =>{
 
     blobimage.src = "assets/images/blob.png" ;
-    blobimage.style.width = "21em";
+    blobimage.style.width = "18em";
     blobimage.style.marginLeft ="auto";
     blobimage.style.marginRight ="auto";
     
@@ -692,12 +700,41 @@ radiotwo.onchange = () =>{
     
     blobimage.style.visibility = "hidden";
 }
+deleteCurrentButton = (currentChild) => {
+    for(let image of form.children) {
+        if(!(image == currentChild)) {
+            image.classList.remove("current");
+            image.style.backgroundColor = "inherit";
+            image.style.color = "black";
+    }
+}
+}
+
+for(let image of form.children) {
+    image.addEventListener('click', (e) => {
+        randomImage.src = `/assets/images/${image.name}`;
+        randomImage.style.visibility = "visible";
+        e.preventDefault();
+        if (image.classList.contains("current")) {
+            image.style.backgroundColor = "inherit";
+            child.style.color = "black";
+            randomImage.style.visibility = "hidden";
+            image.classList.remove("current");
+        }
+        else{
+            image.style.backgroundColor = "#403e38";
+            image.style.color = "white";
+            image.classList.add("current");
+            deleteCurrentButton(image);
+        }
+    })
+}
 //5  images to display
 
-let button_status=[false,false,false,false,false];
-let current_button=''
+/* let button_status=[false,false,false,false,false];
+let current_button='' */
 
-//polaroid
+/* //polaroid
 poloroid.addEventListener('click', (e)=>{
     //changeImage.style.backgroundImage = "url(assets/images/poloroid.png) no-repeat" 
     randomImage.src = "assets/images/polaroid.png" ;
@@ -705,7 +742,7 @@ poloroid.addEventListener('click', (e)=>{
     randomImage.style.right = "5em";
     randomImage.style.top = "6em";
     randomImage.style.visibility = "visible";
-    e.preventDefault();
+     e.preventDefault();
     if(button_status[0]){
         poloroid.style.backgroundColor = "inherit";
         poloroid.style.color = "black";
@@ -724,9 +761,8 @@ poloroid.addEventListener('click', (e)=>{
         Radio.style.color = "black";
         
         button_status[0]=true
-    }
-    
-    poloroid.classList.add('buttons')
+    } */
+ /*    //poloroid.classList.add('buttons')
 
     
 });
@@ -739,11 +775,11 @@ TV.addEventListener('click', (e)=>{
     randomImage.style.right = "7em";
     randomImage.style.top = "6em";
     randomImage.style.visibility = "visible";
-    e.preventDefault();
+      e.preventDefault();
     if(button_status[1]){
         TV.style.backgroundColor = "inherit";
         TV.style.color = "black";
-        button_status[1]=false
+        button_status[1]=false;
         randomImage.style.visibility = "hidden";
     }else{
         TV.style.backgroundColor = "#403e38";
@@ -758,7 +794,9 @@ TV.addEventListener('click', (e)=>{
         Radio.style.color = "black";
         button_status[1]=true
     }
-    TV.classList.add('buttons')
+    console.log(button_status)
+
+    //TV.classList.add('buttons')
     
 });
 
@@ -771,7 +809,7 @@ Traitor.addEventListener('click', (e)=>{
     randomImage.style.right = "7em";
     randomImage.style.top = "5em";
     randomImage.style.visibility = "visible";
-    e.preventDefault();
+     e.preventDefault();
     if(button_status[2]){
         Traitor.style.backgroundColor = "inherit";
         Traitor.style.color = "black";
@@ -792,8 +830,10 @@ Traitor.addEventListener('click', (e)=>{
         button_status[2] = true;
 
     }
+    console.log(button_status)
+
     
-    Traitor.classList.add('buttons')
+    //Traitor.classList.add('buttons')
     
 
 
@@ -808,7 +848,7 @@ Fallguy.addEventListener('click', (e)=>{
     randomImage.style.right = "7.5em";
     randomImage.style.top = "6em";
     randomImage.style.visibility = "visible";
-    e.preventDefault();
+     e.preventDefault();
     if(button_status[3]){
         Fallguy.style.backgroundColor = "inherit";
         Fallguy.style.color = "black";
@@ -830,8 +870,10 @@ Fallguy.addEventListener('click', (e)=>{
         button_status[3] = true;
 
     }
+    console.log(button_status)
+
     
-    Fallguy.classList.add('buttons')
+    //Fallguy.classList.add('buttons')
     
 });
 
@@ -844,7 +886,7 @@ Radio.addEventListener('click', (e)=>{
     randomImage.style.right = "7em";
     randomImage.style.top = "7em";
     randomImage.style.visibility = "visible";
-    e.preventDefault();
+     e.preventDefault();
     if(button_status[4]){
         Radio.style.backgroundColor = "inherit";
         Radio.style.color = "black";
@@ -866,10 +908,12 @@ Radio.addEventListener('click', (e)=>{
         button_status[4] = true;
 
     }
+    console.log(button_status)
+
     
-    Radio.classList.add('buttons')
+    //Radio.classList.add('buttons')
     
-});
+}); */
 
   const style = document.createElement('style');
   style.innerHTML = `
@@ -915,7 +959,103 @@ Radio.addEventListener('click', (e)=>{
 
   
       }
+}
+
+let y =window.matchMedia("(max-width: 320px)")
+  iphoneResponsive(y);
+  x.addListener(iphoneResponsive);
+  function iphoneResponsive(y) {
+      if(y.matches){
+          /* leftContainer.style.marginLeft = "0"
+          leftContainer.style.width = "auto";
+          hero.style.justifyContent = "space-between" */
+          
+          //rightDiv.style.marginRight = "80px"
+          //leftDiv.style.marginLeft = "70px"
+        //   form.style.flexWrap = "wrap"
+        //   //form.style.flexFlow = "column wrap"
+        //   //form.style.alignContent = "space-between"
+        //   body.style.width = "320px";
+        //    Traitor.style.alignSelf = "flex-start"
+        //    //Traitor.style.marginLeft = "0px";
+        //    mainDiv.style.width = "320px"
+        //    newHeading.style.justifyContent = "center"
+        //    mainDiv.style.justifyContent = "flex-start"
+        //    body.style.width = "320px";
+        //    secondform.style.width = "15em"
+        //    secondform.style.flexWrap = "wrap"
+        mainDiv.style.width = "320px"
+        mainDiv.style.justifyContent = "center"
+        form.style.flexWrap = "wrap"
+        form.style.alignContent = "space-around"
+        leftDiv.style.width = "67vw";
+        TV.style.marginRight = "16px";
+        Traitor.style.marginLeft = "0px";
+        Radio.style.marginLeft = "0px";
+        secondform.style.flexWrap = "wrap"
+        secondform.style.width = "16em"
+        Bling.style.marginRight = "22px"
+        selectBackground.style.marginLeft = "0px";
+        newForm.style.marginLeft = "0px";
+        divElements.style.width = "280px"
+        blobimage.style.width = "16em";
+        footer.style.flexWrap = "wrap"
+        deleteButton.style.top = "-20px";
+        deleteButton.style.right = "-20px";
+        deleteButton.style.width = "2em"
+        
+
+        
 
 
-  }
+          
+          
+      }
+      else{
+        //   mainDiv.style.flexDirection = "column";
+        //    rightDiv.style.alignSelf = "auto";
+           
+        //    //form.style.flexFlow = "row nowrap"
+
+        //    mainDiv.style.width = "768px"
+        //    body.style.width = "100%";
+        // //   //body.style.maxWidth = "768px"
+        // //   mainDiv.style.justifyContent = "center"
+        //    newHeading.style.justifyContent = "center"
+        //   //rightDiv.style.marginRight = "0px"
+        //   //leftDiv.style.marginLeft = "0px"
+        //   form.style.flexWrap = "nowrap"
+        //   form.style.width = "35em"
+        //   //form.style.alignContent = "flex-start"
+        //   //Traitor.style.marginLeft = "20px";
+        //   newHeading.style.justifyContent = "center"
+        //   mainDiv.style.justifyContent = "center"
+        //   body.style.width = "100%";
+        //   //secondform.style.width = "35em"
+        //   secondform.style.flexWrap = "nowrap"
+        mainDiv.style.width = "100%"
+        mainDiv.style.justifyContent = "auto"
+        form.style.flexWrap = "nowrap"
+        form.style.alignContent = "flex-start"
+        leftDiv.style.width = "55vw";
+        TV.style.marginRight = "0px"
+        Traitor.style.marginLeft = "20px";
+        Radio.style.marginLeft = "24px";
+        secondform.style.flexWrap = "nowrap"
+        secondform.style.width = "35em"
+        Bling.style.marginRight = "0px"
+        selectBackground.style.marginLeft = "20px";
+        newForm.style.marginLeft = "20px";
+        divElements.style.width = "300px"
+        blobimage.style.width = "17em";
+        footer.style.flexWrap = "nowrap"
+        deleteButton.style.top = "-20px";
+        deleteButton.style.right = "-20px";
+        deleteButton.style.width = "3em"
+        divElements.style.width = "282px"
+  
+      }
+}
+
+
 
