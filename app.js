@@ -724,13 +724,18 @@ deleteCurrentButton = (currentChild) => {
 
 for(let image of form.children) {
     image.addEventListener('click', (e) => {
-        largerFont.textContent = "Stuff"
+        if(largerFont.textContent == ""){
+            largerFont.textContent = "Stuff"
+        }else{
+            largerFont.textContent = Bling.value;
+        }
+        
         randomImage.src = `/assets/images/${image.name}`;
         randomImage.style.visibility = "visible";
         e.preventDefault();
         if (image.classList.contains("current")) {
             image.style.backgroundColor = "inherit";
-            child.style.color = "black";
+            image.style.color = "black";
             randomImage.style.visibility = "hidden";
             image.classList.remove("current");
         }
