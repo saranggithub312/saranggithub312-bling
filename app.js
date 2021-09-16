@@ -26,7 +26,7 @@ newHeading.style.justifyContent = "center"
 newHeading.style.paddingTop = "20px";
 newHeading.style.fontWeight = "bold";
 newHeading.style.textShadow = "2px 2px 2px #CE5937";
-newHeading.style.fontFamily = "sansSerif";
+newHeading.style.fontFamily = "Montserrat";
 // newHeading.style.marginLeft = "0px"
 
 
@@ -55,8 +55,8 @@ para.textContent = "Sizzle Your Life"
 para.style.marginTop = "80px";
 para.style.fontSize = "22px";
 // para.style.marginLeft = "120px";
-para.style.fontFamily = "Helvetica";
-para.style.fontWeight = "lighter";
+para.style.fontFamily = "Montserrat";
+para.style.fontWeight = "normal";
 
 
 let boldpara = document.createElement('h1');
@@ -67,7 +67,7 @@ boldpara.style.marginTop = "15px";
 boldpara.style.fontSize = "45px";
 boldpara.style.fontWeight = "bold";
 // boldpara.style.marginLeft = "120px";
-boldpara.style.fontFamily = "sans-serif";
+boldpara.style.fontFamily = "Montserrat";
 
 let form = document.createElement('form');
 leftDiv.append(form);
@@ -469,7 +469,8 @@ largerFont.style.fontSize = "4.5em";
 largerFont.style.fontFamily = "Montserrat"
 largerFont.style.fontWeight = "bolder"
 largerFont.style.color = "#403e38"
-largerFont.style.marginLeft = "30px"
+largerFont.style.textAlign = "center"
+//largerFont.style.marginLeft = "30px"
 //right sub div two
 const rightsubdivtwo = document.createElement('div');
 rightDiv.append(rightsubdivtwo);
@@ -586,7 +587,7 @@ footer.style.justifyContent = "center"
  let creditLink = document.createElement('p');
  footer.append(creditLink);
  creditLink.textContent= "🖤Credits:";
- creditLink.style.fontFamily = "sans-serif";
+ creditLink.style.fontFamily = "Montserrat";
  creditLink.style.fontWeight = "600";
  creditLink.style.fontSize = "15px";
  creditLink.style.cursor = "pointer"
@@ -598,7 +599,7 @@ footer.style.justifyContent = "center"
  footer.append(poloroidLink);
  poloroidLink.textContent= "Polaroid";
  poloroidLink.style.marginLeft = "20px"
- poloroidLink.style.fontFamily = "sans-serif";
+ poloroidLink.style.fontFamily = "Montserrat";
  poloroidLink.style.fontWeight = "600";
  poloroidLink.style.fontSize = "15px";
  poloroidLink.style.cursor = "pointer" 
@@ -615,7 +616,7 @@ footer.style.justifyContent = "center"
  footer.append(tvLink);
  tvLink.textContent= "TV";
  tvLink.style.marginLeft = "20px"
- tvLink.style.fontFamily = "sans-serif";
+ tvLink.style.fontFamily = "Montserrat";
  tvLink.style.fontWeight = "600";
  tvLink.style.fontSize = "15px";
  tvLink.style.cursor = "pointer"
@@ -630,7 +631,7 @@ footer.style.justifyContent = "center"
  footer.append(traitorLink);
  traitorLink.textContent= "traitor";
  traitorLink.style.marginLeft = "20px";
- traitorLink.style.fontFamily = "sans-serif";
+ traitorLink.style.fontFamily = "Montserrat";
  traitorLink.style.fontWeight = "600";
  traitorLink.style.fontSize = "15px";
  traitorLink.style.cursor = "pointer"
@@ -645,7 +646,7 @@ footer.style.justifyContent = "center"
  footer.append(fallguyLink);
  fallguyLink.textContent= "fallGuy";
  fallguyLink.style.marginLeft = "20px";
- fallguyLink.style.fontFamily = "sans-serif";
+ fallguyLink.style.fontFamily = "Montserrat";
  fallguyLink.style.fontWeight = "600";
  fallguyLink.style.fontSize = "15px";
  fallguyLink.style.cursor = "pointer"
@@ -660,7 +661,7 @@ footer.style.justifyContent = "center"
  footer.append(radioLink);
  radioLink.textContent= "Radio";
  radioLink.style.marginLeft = "20px";
- radioLink.style.fontFamily = "sans-serif";
+ radioLink.style.fontFamily = "Montserrat";
  radioLink.style.fontWeight = "600";
  radioLink.style.fontSize = "15px";
  radioLink.style.cursor = "pointer"
