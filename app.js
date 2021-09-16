@@ -470,6 +470,7 @@ largerFont.style.fontFamily = "Montserrat"
 largerFont.style.fontWeight = "bolder"
 largerFont.style.color = "#403e38"
 largerFont.style.textAlign = "center"
+largerFont.style.wordWrap = "break-word"
 //largerFont.style.marginLeft = "30px"
 //right sub div two
 const rightsubdivtwo = document.createElement('div');
@@ -954,13 +955,14 @@ Radio.addEventListener('click', (e)=>{
           leftDiv.style.alignSelf = "center"
           mainDiv.style.width = "768px"
           //randomImage.style.right = "-3em";
-          body.style.width = "100%";
+          body.style.width = "100vw";
           //body.style.maxWidth = "768px"
           mainDiv.style.justifyContent = "center"
           newHeading.style.justifyContent = "center"
           //rightDiv.style.marginRight = "80px"
           //leftDiv.style.marginLeft = "70px"
           secondDiv.style.minHeight = "80px"
+          
           
       }
       else{
@@ -1017,12 +1019,12 @@ let y =window.matchMedia("(max-width: 320px)")
         Bling.style.marginRight = "22px"
         selectBackground.style.marginLeft = "0px";
         newForm.style.marginLeft = "0px";
-        divElements.style.width = "270px"
+        //divElements.style.width = "270px"
         blobimage.style.width = "16em";
         footer.style.flexWrap = "wrap"
-        deleteButton.style.top = "-20px";
-        deleteButton.style.right = "-20px";
-        deleteButton.style.width = "2em"
+        // deleteButton.style.top = "-20px";
+        // deleteButton.style.right = "-20px";
+        // deleteButton.style.width = "2em"
         
 
         
@@ -1032,27 +1034,7 @@ let y =window.matchMedia("(max-width: 320px)")
           
       }
       else{
-        //   mainDiv.style.flexDirection = "column";
-        //    rightDiv.style.alignSelf = "auto";
-           
-        //    //form.style.flexFlow = "row nowrap"
-
-        //    mainDiv.style.width = "768px"
-        //    body.style.width = "100%";
-        // //   //body.style.maxWidth = "768px"
-        // //   mainDiv.style.justifyContent = "center"
-        //    newHeading.style.justifyContent = "center"
-        //   //rightDiv.style.marginRight = "0px"
-        //   //leftDiv.style.marginLeft = "0px"
-        //   form.style.flexWrap = "nowrap"
-        //   form.style.width = "35em"
-        //   //form.style.alignContent = "flex-start"
-        //   //Traitor.style.marginLeft = "20px";
-        //   newHeading.style.justifyContent = "center"
-        //   mainDiv.style.justifyContent = "center"
-        //   body.style.width = "100%";
-        //   //secondform.style.width = "35em"
-        //   secondform.style.flexWrap = "nowrap"
+        
         mainDiv.style.width = "100%"
         mainDiv.style.justifyContent = "auto"
         form.style.flexWrap = "nowrap"
@@ -1069,10 +1051,8 @@ let y =window.matchMedia("(max-width: 320px)")
         //divElements.style.width = "300px"
         blobimage.style.width = "17em";
         footer.style.flexWrap = "nowrap"
-        deleteButton.style.top = "-20px";
-        deleteButton.style.right = "-20px";
-        deleteButton.style.width = "3em"
-        divElements.style.width = "280px"
+        
+        //divElements.style.width = "280px"
   
       }
 }
