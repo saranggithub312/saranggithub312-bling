@@ -603,7 +603,7 @@ footer.style.justifyContent = "center"
  poloroidLink.style.fontWeight = "600";
  poloroidLink.style.fontSize = "15px";
  poloroidLink.style.cursor = "pointer" 
- poloroidLink.href = "https://s3-alpha.figma.com/hub/file/996219503/3412726a-7535-4715-b194-6cf2824fc294-cover.png"
+ poloroidLink.href = "https://www.figma.com/community/file/999755209064837558"
  poloroidLink.classList.add('links');
  poloroidLink.style.textDecoration = "none";
  poloroidLink.style.color = "black"
@@ -665,7 +665,7 @@ footer.style.justifyContent = "center"
  radioLink.style.fontWeight = "600";
  radioLink.style.fontSize = "15px";
  radioLink.style.cursor = "pointer"
- radioLink.href = "https://s3-alpha.figma.com/hub/file/996219503/3412726a-7535-4715-b194-6cf2824fc294-cover.png"
+ radioLink.href = "https://www.figma.com/community/file/883250469660505749";
  radioLink.classList.add('links');
  radioLink.style.textDecoration = "none";
  radioLink.style.color = "black"
